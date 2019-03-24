@@ -45,17 +45,19 @@ end CacheStruct;
 
 architecture Behavioral of CacheStruct is
 -- Cache data LRU bit + Dirty Bit + Valid + Tag(4 bits) + CacheData(32 bits) = 
-type cache_one is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
-type cache_two is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
-type cache_three is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
-type cache_four is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
-signal cacheone: cache_one:= (OTHERS=>(OTHERS=>'0'));
-signal cachetwo: cache_two:= (OTHERS=>(OTHERS=>'0'));
-signal cachethree: cache_three:=(OTHERS=>(OTHERS=>'0'));
-signal cachefour: cache_four:=(OTHERS=>(OTHERS=>'0'));
+type cache_data is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
+type lru_count is array(63 downto 0) of INTEGER range 0 to 3;
+signal cacheone: cache_data:= (OTHERS=>(OTHERS=>'0'));
+signal cachetwo: cache_data:= (OTHERS=>(OTHERS=>'0'));
+signal cachethree: cache_data:=(OTHERS=>(OTHERS=>'0'));
+signal cachefour: cache_data:=(OTHERS=>(OTHERS=>'0'));
+signal lruOne: lru_count:=(OTHERS=> 0 );
+signal lruTwo: lru_count:=(OTHERS=> 1);
+signal lruThree: lru_count:=(OTHERS=> 2);
+signal lruFour : lru_count:=(OTHERS=> 3);
 signal tag: STD_LOGIC_VECTOR(3 downto 0):= (OTHERS => '0');
 signal index: STD_LOGIC_VECTOR(5 downto 0):= (OTHERS=>'0');
-
+signal counterVal: INTEGER range 0 to 3:=0;
 signal missFlag: STD_LOGIC:='0';
 signal temp: STD_LOGIC:='0';
 begin
@@ -63,8 +65,8 @@ begin
 tag <= Address(9 downto 6);
 index <= Address(5 downto 0);
 
-process(CLK,ren)
-variable curr: INTEGER := 0;
+process(CLK,ren,wren)
+variable curr: INTEGER range 0 to 64 := 0;
 begin
     curr:= to_integer(unsigned(index));
     if(rising_edge(CLK)) then
@@ -74,59 +76,136 @@ begin
                 hit <= '0';
            
            else
-              
                 if(cacheone(curr)(36)='1' and tag = cacheone(curr)(35 downto 32)) then
+                    if(lruOne(curr)= 0) then
+                        lruOne(curr) <= 3;
+                        lruTwo(curr) <= lruTwo(curr)-1;
+                        lruThree(curr) <= lruThree(curr)-1;
+                        lruFour(curr) <= lruFour(curr)-1;
+                    elsif(lruOne(curr) = 1 or lruOne(curr)=2) then
+                        counterVal <= lruOne(curr);
+                        lruOne(curr) <= 3;
+                        if(lruTwo(curr) > counterVal) then
+                            lruTwo(curr) <= lruTwo(curr)-1;
+                        end if;
+                        if(lruThree(curr) > counterVal) then
+                            lruThree(curr) <= lruThree(curr)-1;
+                        end if;
+                        if(lruFour(curr) > counterVal) then
+                            lruFour(curr) <= lruFour(curr)-1;
+                        end if;
+                    end if;
                     hit <= '1';
                     cache_out <= cacheone(curr)(31 downto 0);
                 elsif(cachetwo(curr)(36) = '1' and tag = cachetwo(curr)(35 downto 32)) then
+                    if(lruTwo(curr)= 0) then
+                        lruOne(curr) <= lruOne(curr)-1;
+                        lruTwo(curr) <= 3;
+                        lruThree(curr) <= lruThree(curr)-1;
+                        lruFour(curr) <= lruFour(curr)-1;
+                    elsif(lruTwo(curr) = 1 or lruTwo(curr)=2) then
+                        counterVal <= lruTwo(curr);
+                        lruTwo(curr) <= 3;
+                        if(lruOne(curr) > counterVal) then
+                            lruOne(curr) <= lruOne(curr)-1;
+                        end if;
+                        if(lruThree(curr) > counterVal) then
+                            lruThree(curr) <= lruThree(curr)-1;
+                        end if;
+                        if(lruFour(curr) > counterVal) then
+                            lruFour(curr) <= lruFour(curr)-1;
+                        end if;
+                    end if;
                     cache_out <= cachetwo(curr)(31 downto 0);
                     hit <= '1';
                 elsif(cachethree(curr)(36) = '1' and tag = cachetwo(curr)(35 downto 32)) then
+                    if(lruThree(curr)= 0) then
+                        lruOne(curr) <= lruOne(curr)-1;
+                        lruTwo(curr) <= lruTwo(curr)-1;
+                        lruThree(curr) <= 3;
+                        lruFour(curr) <= lruFour(curr)-1;
+                    elsif(lruThree(curr) = 1 or lruThree(curr)=2) then
+                        counterVal <= lruThree(curr);
+                        lruThree(curr) <= 3;
+                        if(lruTwo(curr) > counterVal) then
+                            lruTwo(curr) <= lruTwo(curr)-1;
+                        end if;
+                        if(lruOne(curr) > counterVal) then
+                            lruOne(curr) <= lruOne(curr)-1;
+                        end if;
+                        if(lruFour(curr) > counterVal) then
+                            lruFour(curr) <= lruFour(curr)-1;
+                        end if;
+                    end if;
                     cache_out <= cachethree(curr)(31 downto 0);
                     hit <= '1';
                 else
+                        if(lruFour(curr)= 0) then
+                            lruOne(curr) <= lruOne(curr)-1;
+                            lruTwo(curr) <= lruTwo(curr)-1;
+                            lruThree(curr) <= lruThree(curr)-1;
+                            lruFour(curr) <= 3;
+                        elsif(lruFour(curr) = 1 or lruFour(curr)=2) then
+                            counterVal <= lruFour(curr);
+                            lruFour(curr) <= 3;
+                            if(lruTwo(curr) > counterVal) then
+                                lruTwo(curr) <= lruTwo(curr)-1;
+                            end if;
+                            if(lruThree(curr) > counterVal) then
+                                lruThree(curr) <= lruThree(curr)-1;
+                            end if;
+                            if(lruOne(curr) > counterVal) then
+                                lruOne(curr) <= lruOne(curr)-1;
+                            end if;
                     cache_out <= cachefour(curr)(31 downto 0);
                     hit <= '1';
                 end if;
            end if;
-                    
+          end if;
        end if;
-            
-                    
-            
-    end if;
-
-end process;
-
-process(CLK,wren)
-variable curr: INTEGER:=0;
-begin
-    curr:= to_integer(unsigned(index));
-    if(rising_edge(CLK)) then 
-            if(wren = '1') then
+          if(wren = '1') then
                 temp <= (cacheone(curr)(36) and cachetwo(curr)(36) and cachethree(curr)(36) and cachefour(curr)(36));
                 if(temp = '1') then
                     evict <= '1';
                 else
-                    if(cacheone(curr)(36)='0') then
+                    if(lruOne(curr) =0) then
+                        lruOne(curr) <= 3;
+                        lruTwo(curr) <= lruTwo(curr)-1;
+                        lruThree(curr) <= lruThree(curr) -1;
+                        lruFour(curr) <= lruFour(curr)-1;
                         cacheone(curr)(31 downto 0) <= cache_in;
                         cacheone(curr)(36) <= '1';
-                    elsif(cachetwo(curr)(36)='0') then
+                    elsif(lruTwo(curr) =0) then
+                        lruTwo(curr) <= 3;
+                        lruOne(curr) <= lruOne(curr)-1;
+                        lruThree(curr) <= lruThree(curr) -1;
+                        lruFour(curr) <= lruFour(curr)-1;
                         cachetwo(curr)(31 downto 0) <= cache_in;
-                         cachetwo(curr)(36) <= '1';
-                    elsif(cachethree(curr)(36)='0') then
+                        cachetwo(curr)(36) <= '1';
+                    elsif(lruThree(curr) =0) then
+                        lruTwo(curr) <= lruTwo(curr)-1;
+                        lruOne(curr) <= lruOne(curr)-1;
+                        lruThree(curr) <= 3;
+                        lruFour(curr) <= lruFour(curr)-1;
                         cachethree(curr)(31 downto 0) <= cache_in;
                         cachethree(curr)(36) <= '1';
                     else
+                        lruTwo(curr) <= lruTwo(curr)-1;
+                        lruOne(curr) <= lruOne(curr)-1;
+                        lruThree(curr) <= lruThree(curr) -1;
+                        lruFour(curr) <= 3;
                         cachefour(curr)(31 downto 0) <= cache_in;
                         cacheone(curr)(36) <= '1';
                     end if;
                 end if;
              end if;
-     end if;
+                    
+       
+            
                     
             
-    
+    end if;
+
 end process;
 
 
