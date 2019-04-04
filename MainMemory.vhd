@@ -14,12 +14,12 @@ end MainMemory;
 
 architecture behavorial_data_array of MainMemory is
     type array_data is array (0 to 1023) of STD_LOGIC_VECTOR (31 downto 0);
-    signal data : array_data;
+    signal data : array_data:=(OTHERS=>(OTHERS=>'1'));
 begin
     
     data_out <= data(to_integer(unsigned(address)));
 
-    process(clk)
+    process(clk,Wren)
     begin
         ram_ready <= '0';
         if(Wren = '1') then

@@ -34,18 +34,17 @@ use IEEE.numeric_std.all;
 entity CacheStruct is
     Port ( Address : in STD_LOGIC_VECTOR (9 downto 0);
            CLK: in STD_LOGIC;
-           ren : in STD_LOGIC;
-           evict: out STD_LOGIC;
+           ren,CacheDirty : in STD_LOGIC;
+           evict,Dirty: out STD_LOGIC;
            wren: in STD_LOGIC;
            Cache_in: in STD_LOGIC_VECTOR(31 downto 0);
            Cache_out: out STD_LOGIC_VECTOR (31 downto 0);
-           Write : out STD_LOGIC;
            hit : out STD_LOGIC);
 end CacheStruct;
 
 architecture Behavioral of CacheStruct is
 -- Cache data LRU bit + Dirty Bit + Valid + Tag(4 bits) + CacheData(32 bits) = 
-type cache_data is array (63 downto 0) of STD_LOGIC_VECTOR (38 downto 0);
+type cache_data is array (63 downto 0) of STD_LOGIC_VECTOR (37 downto 0);
 type lru_count is array(63 downto 0) of INTEGER range 0 to 3;
 signal cacheone: cache_data:= (OTHERS=>(OTHERS=>'0'));
 signal cachetwo: cache_data:= (OTHERS=>(OTHERS=>'0'));
@@ -59,22 +58,29 @@ signal tag: STD_LOGIC_VECTOR(3 downto 0):= (OTHERS => '0');
 signal index: STD_LOGIC_VECTOR(5 downto 0):= (OTHERS=>'0');
 signal counterVal: INTEGER range 0 to 3:=0;
 signal missFlag: STD_LOGIC:='0';
-signal temp: STD_LOGIC:='0';
+signal temp,temp2: STD_LOGIC:='0';
+signal curr: INTEGER range 0 to 64:=0;
 begin
 
 tag <= Address(9 downto 6);
 index <= Address(5 downto 0);
-
+temp <= not(cacheone(curr)(36) or cachetwo(curr)(36) or cachethree(curr)(36) or cachefour(curr)(36));
+temp2 <= cacheone(curr)(36) and cachetwo(curr)(36) and cachethree(curr)(36) and cachefour(curr)(36);
 process(CLK,ren,wren)
-variable curr: INTEGER range 0 to 64 := 0;
+
 begin
-    curr:= to_integer(unsigned(index));
+    
+    curr <= to_integer(unsigned(index));
     if(rising_edge(CLK)) then
+       evict <= '0';
+       hit <= '0';
+       dirty <= '0';
        if(ren = '1') then
-           temp <= not(cacheone(curr)(36) or cachetwo(curr)(36) or cachethree(curr)(36) or cachefour(curr)(36));
+           
            if(temp = '1') then
                 hit <= '0';
-           
+                evict <= '0';
+                dirty <= '0';
            else
                 if(cacheone(curr)(36)='1' and tag = cacheone(curr)(35 downto 32)) then
                     if(lruOne(curr)= 0) then
@@ -165,9 +171,29 @@ begin
        end if;
           if(wren = '1') then
                 temp <= (cacheone(curr)(36) and cachetwo(curr)(36) and cachethree(curr)(36) and cachefour(curr)(36));
-                if(temp = '1') then
+                if(temp2 = '1') then
+                   
                     evict <= '1';
+                    if(lruOne(curr) = 0 ) then
+                        dirty <= cacheone(curr)(37);
+                        Cache_out <= cacheone(curr)(31 downto 0);
+                        cacheone(curr)(36) <= '0';
+                    elsif(lruTwo(curr) = 0) then
+                        dirty <= cachetwo(curr)(37);
+                        Cache_out <= cachetwo(curr)(31 downto 0);
+                        cachetwo(curr)(36) <= '0';
+                    elsif(lruThree(curr) =0) then
+                        dirty <= cachethree(curr)(37);
+                        Cache_out <= cachethree(curr)(31 downto 0);
+                        cachethree(curr)(36) <= '0';
+                    else
+                        dirty <= cachefour(curr)(37);
+                        Cache_out <= cachefour(curr)(31 downto 0);
+                        cachethree(curr)(36) <= '0';
+                    end if;
                 else
+                    evict <= '0';
+                    dirty <= '0';
                     if(lruOne(curr) =0) then
                         lruOne(curr) <= 3;
                         lruTwo(curr) <= lruTwo(curr)-1;
@@ -175,6 +201,10 @@ begin
                         lruFour(curr) <= lruFour(curr)-1;
                         cacheone(curr)(31 downto 0) <= cache_in;
                         cacheone(curr)(36) <= '1';
+                        cacheone(curr)(35 downto 32) <= tag;
+                        if(CacheDirty = '1') then
+                            cacheone(curr)(37) <= '1'; --dirty bit
+                        end if;
                     elsif(lruTwo(curr) =0) then
                         lruTwo(curr) <= 3;
                         lruOne(curr) <= lruOne(curr)-1;
@@ -182,6 +212,10 @@ begin
                         lruFour(curr) <= lruFour(curr)-1;
                         cachetwo(curr)(31 downto 0) <= cache_in;
                         cachetwo(curr)(36) <= '1';
+                        cachetwo(curr)(35 downto 32) <= tag;
+                        if(CacheDirty = '1') then
+                            cachetwo(curr)(37) <= '1'; --dirty bit
+                        end if;
                     elsif(lruThree(curr) =0) then
                         lruTwo(curr) <= lruTwo(curr)-1;
                         lruOne(curr) <= lruOne(curr)-1;
@@ -189,13 +223,21 @@ begin
                         lruFour(curr) <= lruFour(curr)-1;
                         cachethree(curr)(31 downto 0) <= cache_in;
                         cachethree(curr)(36) <= '1';
+                        cachethree(curr)(35 downto 32) <= tag;
+                        if(CacheDirty = '1') then
+                            cachethree(curr)(37) <= '1'; --dirty bit
+                        end if;
                     else
                         lruTwo(curr) <= lruTwo(curr)-1;
                         lruOne(curr) <= lruOne(curr)-1;
                         lruThree(curr) <= lruThree(curr) -1;
                         lruFour(curr) <= 3;
                         cachefour(curr)(31 downto 0) <= cache_in;
-                        cacheone(curr)(36) <= '1';
+                        cachefour(curr)(36) <= '1';
+                        cachefour(curr)(35 downto 32) <= tag;
+                        if(CacheDirty = '1') then
+                            cachefour(curr)(37) <= '1'; --dirty bit
+                        end if;
                     end if;
                 end if;
              end if;
