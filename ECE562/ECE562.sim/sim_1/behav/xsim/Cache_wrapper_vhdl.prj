@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ECE562.ip_user_files/bd/Cache/sim/Cache.vhd" \
+"../../../../ECE562.srcs/sources_1/bd/Cache/hdl/Cache_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

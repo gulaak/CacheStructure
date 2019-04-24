@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 20 00:16:06 2019
+# Process ID: 29584
+# Current directory: C:/Users/Aiden/Desktop/ECE562
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35212 C:\Users\Aiden\Desktop\ECE562\ECE562.xpr
+# Log file: C:/Users/Aiden/Desktop/ECE562/vivado.log
+# Journal file: C:/Users/Aiden/Desktop/ECE562\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Aiden/Desktop/ECE562/ECE562.xpr
+update_compile_order -fileset sources_1
+set_property flow {Vivado Synthesis 2018} [get_runs synth_1]
+create_run synth_2 -flow {Vivado Synthesis 2018} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+current_run [get_runs synth_2]
+set_property part xc7a100tcsg324-1 [current_project]
+set_property flow {Vivado Implementation 2017} [get_runs impl_2]
+delete_runs "synth_1"
+file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1
+file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new
+close [ open C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc w ]
+add_files -fileset constrs_1 C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+synth_design -rtl -name rtl_1
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2

@@ -1,0 +1,18 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Aiden/Desktop/ECE562/ECE562.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/cache.vhd,1496639223,vhdl,,,,cache,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/cache_ram.vhd,1496639223,vhdl,,,,cache_ram,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/controller.vhd,1496639223,vhdl,,,,controller,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/data_array.vhd,1496639223,vhdl,,,,data_array,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/lru_array.vhd,1496639223,vhdl,,,,lru_array,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/miss_hit_logic.vhd,1496639223,vhdl,,,,miss_hit_logic,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/mux.vhd,1496639223,vhdl,,,,mux,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/ram.vhd,1496639223,vhdl,,,,ram,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/imports/src/tag_valid_array.vhd,1496639223,vhdl,,,,tag_valid_array,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheController.vhd,1554765877,vhdl2008,,,,cachecontroller,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd,1554331614,vhdl2008,,,,cachestruct,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd,1554320047,vhdl2008,,,,mainmemory,,,,,,,,
+C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd,1554765873,vhdl2008,,,,toplevelcache,,,,,,,,

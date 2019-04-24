@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ECE562.ip_user_files/bd/Cache/ip/Cache_blk_mem_gen_0_2/sim/Cache_blk_mem_gen_0_2.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

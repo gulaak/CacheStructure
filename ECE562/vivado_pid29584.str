@@ -1,0 +1,1327 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 29584
+License: Customer
+
+Current time: 	Sat Apr 20 00:16:15 EDT 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 136 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Aiden
+User home directory: C:/Users/Aiden
+User working directory: C:/Users/Aiden/Desktop/ECE562
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.3
+RDI_DATADIR: D:/Vivado/2018.3/data
+RDI_BINDIR: D:/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Aiden/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Aiden/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Aiden/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Aiden/Desktop/ECE562/vivado.log
+Vivado journal file location: 	C:/Users/Aiden/Desktop/ECE562/vivado.jou
+Engine tmp dir: 	C:/Users/Aiden/Desktop/ECE562/.Xil/Vivado-29584-DESKTOP-T2T1KVN
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2018.3
+XILINX_SDK: D:/SDK/2018.3
+XILINX_VIVADO: D:/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 644 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 61 MB (+61800kb) [00:00:04]
+// [Engine Memory]: 573 MB (+449452kb) [00:00:04]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Aiden\Desktop\ECE562\ECE562.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Aiden/Desktop/ECE562/ECE562.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Aiden/Desktop/ECE562/ECE562.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 88 MB (+24758kb) [00:00:08]
+// [Engine Memory]: 715 MB (+119025kb) [00:00:08]
+// [GUI Memory]: 104 MB (+11654kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1908 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 745 MB. GUI used memory: 50 MB. Current time: 4/20/19, 12:16:18 AM EDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 780.984 ; gain = 164.102 
+// Project name: ECE562; location: C:/Users/Aiden/Desktop/ECE562; part: xcku035-fbva900-1L-i
+dismissDialog("Open Project"); // bx (cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.RunGadget_SHOW_WARNING_AND_ERROR_MESSAGES_IN_MESSAGES, "111 warnings"); // h (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// [Engine Memory]: 769 MB (+18751kb) [00:00:19]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-614] signal 'data_in' is read in the process but is not in the sensitivity list [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:22]. ]", 1, true); // ah (Q, cp) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-614] signal 'data_in' is read in the process but is not in the sensitivity list [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:22]. ]", 1, true); // ah (Q, cp) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-327] inferring latch for variable 'data_reg[0]' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:20]. ]", 4); // ah (Q, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 867 MB. GUI used memory: 50 MB. Current time: 4/20/19, 12:16:37 AM EDT
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-327] inferring latch for variable 'data_reg[0]' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:20]. ]", 4); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis]", 0); // ah (Q, cp)
+// [Engine Memory]: 867 MB (+62808kb) [00:00:38]
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (Q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1224 ms.
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // q (a, F)
+// [GUI Memory]: 110 MB (+1312kb) [00:01:05]
+// [GUI Memory]: 125 MB (+9950kb) [00:01:05]
+// c (F): Select Device: addNotify
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // i (C, c)
+selectComboBox(PAResourceAtoD.BoardChooser_BOARD_REV, "Latest", 0); // c (E, c)
+selectComboBox(PAResourceAtoD.BoardChooser_BOARD_REV, "All", 1); // c (E, c)
+// [GUI Memory]: 143 MB (+12595kb) [00:01:15]
+// Elapsed time: 19 seconds
+selectComboBox(PAResourceAtoD.BoardChooser_BOARD_REV, "All", 1); // c (E, c)
+// Elapsed time: 17 seconds
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Parts", 0); // i (C, c)
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // i (C, c)
+dismissDialog("Select Device"); // c (F)
+// Elapsed time: 102 seconds
+dismissDialog("Settings"); // F (cp)
+selectButton(RDIResourceCommand.RDICommands_SETTINGS, "xcku035-fbva900-1L-i"); // h (Q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// F (cp): Settings: addNotify
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // q (a, F)
+// c (F): Select Device: addNotify
+// Elapsed time: 46 seconds
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "xc7a100tcsg324-1", 0); // x (Q, c)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "xc7a100tcsg324-1", 0, false, false, false, false, true); // x (Q, c) - Double Click
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (c)
+dismissDialog("Select Device"); // c (F)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (F)
+// A (cp): Create New Run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// b (cp): Create Run: addNotify
+dismissDialog("Create New Run"); // A (cp)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (b)
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_ADD
+// Tcl Command: 'set_property INCLUDE_IN_ARCHIVE [ get_property INCLUDE_IN_ARCHIVE [get_runs synth_1]] [get_runs synth_2]'
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// bx (cp):  Change Settings : addNotify
+// Tcl Message: set_property flow {Vivado Synthesis 2018} [get_runs synth_1] 
+// Tcl Message: create_run synth_2 -flow {Vivado Synthesis 2018} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports} 
+// Tcl Message: Run is defaulting to srcset: sources_1 Run is defaulting to constrset: constrs_1 Run is defaulting to part: xcku035-fbva900-1L-i 
+// Tcl Message: current_run [get_runs synth_2] 
+dismissDialog("Create Run"); // b (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// Tcl Message: set_property part xc7a100tcsg324-1 [current_project] 
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property flow {Vivado Implementation 2017} [get_runs impl_2] 
+dismissDialog("Change Settings"); // bx (cp)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Settings"); // F (cp)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aI (aF, cp)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ; Off ;  ;  ;  ;  ;  ;  ;  ;  ; 13585 ; 563 ; 0.0 ; 0 ; 0 ; Mon Apr 08 19:24:44 EDT 2019 ; 00:01:31 ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports* (Vivado Synthesis 2018) ; xcku035-fbva900-1L-i ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // ax (Q, cp) - Node
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.2s
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ; Off ;  ;  ;  ;  ;  ;  ;  ;  ; 13585 ; 563 ; 0.0 ; 0 ; 0 ; Mon Apr 08 19:24:44 EDT 2019 ; 00:01:31 ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports* (Vivado Synthesis 2018) ; xcku035-fbva900-1L-i ; Vivado Synthesis Defaults", 0); // ax (Q, cp)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ; Off ;  ;  ;  ;  ;  ;  ;  ;  ; 13585 ; 563 ; 0.0 ; 0 ; 0 ; Mon Apr 08 19:24:44 EDT 2019 ; 00:01:31 ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports* (Vivado Synthesis 2018) ; xcku035-fbva900-1L-i ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // ax (Q, cp) - Node
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; synth_design Complete! ; Off ;  ;  ;  ;  ;  ;  ;  ;  ; 13585 ; 563 ; 0.0 ; 0 ; 0 ; Mon Apr 08 19:24:44 EDT 2019 ; 00:01:31 ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports* (Vivado Synthesis 2018) ; xcku035-fbva900-1L-i ; Vivado Synthesis Defaults", 0, "synth_1", 0, true, false, false, false, true, false); // ax (Q, cp) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // af (al, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// q (cp): Delete Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "Delete"); // a (q)
+// q (cp): Delete Runs: addNotify
+// bx (q):  Deleting Runs : addNotify
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: RUN_DELETE
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: RUN_DELETE
+// Tcl Message: delete_runs "synth_1" 
+// Tcl Message: INFO: [Vivado 12-3261] Dependent run, 'impl_1', will be deleted with parent run, 'synth_1'. 
+dismissDialog("Deleting Runs"); // bx (q)
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Not started ; Off ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports (Vivado Synthesis 2018) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 0); // ax (Q, cp)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_2 ; constrs_1 ; Not started ; Off ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Synthesis Defaults (Vivado Synthesis 2018) ; Vivado Synthesis Default Reports (Vivado Synthesis 2018) ; xc7a100tcsg324-1 ; Vivado Synthesis Defaults", 0, "synth_2", 0, true); // ax (Q, cp) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true, false, false, false, true, false); // B (D, cp) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3, true, false, false, false, true, false); // B (D, cp) - Popup Trigger - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// Tcl Command: 'file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1'
+// C (cp): Create Constraints File: addNotify
+// Tcl Message: file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1 
+// Elapsed time: 79 seconds
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "board", true); // Y (D, C)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+dismissDialog("Create Constraints File"); // C (cp)
+// Tcl Command: 'file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 87 seconds
+// Tcl Message: file mkdir C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new 
+dismissDialog("Add Sources"); // c (cp)
+// Tcl Message: close [ open C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 4); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, board.xdc]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, board.xdc]", 5, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 187 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (Q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// F (cp): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Bitstream]", 5, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6, true); // L (C, F) - Node
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Project]", 0, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, IP Defaults]", 1, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Source File]", 2, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Display]", 3, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, WebTalk]", 4, false); // L (C, F)
+dismissDialog("Settings"); // F (cp)
+// Elapsed time: 53 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (Q, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// F (cp): Settings: addNotify
+// [GUI Memory]: 167 MB (+17269kb) [00:10:51]
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, General]", 0, false); // L (C, F)
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // q (a, F)
+// c (F): Select Device: addNotify
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "xc7a100tcsg324-1", 0, false, false, false, true, false); // x (Q, c) - Popup Trigger
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "0", 8); // x (Q, c)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "0", 8, false, false, false, false, true); // x (Q, c) - Double Click
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 276, "0", 8); // x (Q, c)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (c)
+dismissDialog("Select Device"); // c (F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Source File]", 2, false); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6, true); // L (C, F) - Node
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Window Behavior]", 12, true); // L (C, F) - Node
+dismissDialog("Settings"); // F (cp)
+// Elapsed time: 180 seconds
+selectCodeEditor("board.xdc", 186, 24); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// al (cp): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bx (cp):  Save Constraints : addNotify
+// TclEventType: FILE_SET_CHANGE
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Save Project"); // al (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 00:30:21 2019] Launched synth_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 136 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a (Q, ah)
+dismissDialog("Synthesis Completed"); // ah (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cp): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (cp)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: TopLevelCache 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,084 MB. GUI used memory: 73 MB. Current time: 4/20/19, 12:32:47 AM EDT
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,396 MB. GUI used memory: 73 MB. Current time: 4/20/19, 12:32:56 AM EDT
+// [Engine Memory]: 1,396 MB (+509111kb) [00:16:48]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,508 MB (+43830kb) [00:16:50]
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1938 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 969.797 ; gain = 62.320 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'MainMemory' (2#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:15] INFO: [Synth 8-3491] module 'CacheStruct' declared at 'C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:34' bound to instance 'UnitThree' of component 'CacheStruct' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:100] INFO: [Synth 8-638] synthesizing module 'CacheStruct' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:45] 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruOne_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruTwo_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruThree_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruFour_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'CacheStruct' (3#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:45] INFO: [Synth 8-226] default block is never used [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:112] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'TopLevelCache' (4#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:42] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1109.234 ; gain = 201.758 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1109.234 ; gain = 201.758 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1109.234 ; gain = 201.758 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Finished Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1494.652 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1532.770 ; gain = 625.293 
+// Tcl Message: 16 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1532.770 ; gain = 625.293 
+// 'dQ' command handler elapsed time: 19 seconds
+// Elapsed time: 18 seconds
+dismissDialog("Open Elaborated Design"); // bx (cp)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+selectCodeEditor("board.xdc", 14, 109); // cl (w, cp)
+selectCodeEditor("board.xdc", 8, 109); // cl (w, cp)
+selectCodeEditor("board.xdc", 581, 112); // cl (w, cp)
+// Elapsed time: 29 seconds
+selectCodeEditor("board.xdc", 617, 120); // cl (w, cp)
+selectCodeEditor("board.xdc", 582, 103); // cl (w, cp)
+selectCodeEditor("board.xdc", 664, 61); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+// Elapsed time: 452 seconds
+selectCodeEditor("board.xdc", 293, 193); // cl (w, cp)
+selectCodeEditor("board.xdc", 559, 193); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("board.xdc", 595, 194); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'c'); // cl (w, cp)
+selectCodeEditor("board.xdc", 559, 212); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 559, 232); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 250); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 559, 264); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 278); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 561, 296); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 313); // cl (w, cp)
+selectCodeEditor("board.xdc", 532, 313); // cl (w, cp)
+selectCodeEditor("board.xdc", 561, 313); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 330); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 556, 346); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 347); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 569, 361); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 567, 381); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 567, 397); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 567, 415); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 569, 430); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 570, 444); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 584, 216); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("board.xdc", 616, 354); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("board.xdc", 559, 92); // cl (w, cp)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "board.xdc", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 560, 415); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 565, 432); // cl (w, cp)
+selectCodeEditor("board.xdc", 529, 435); // cl (w, cp)
+selectCodeEditor("board.xdc", 559, 435); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 585, 435); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 558, 351); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 561, 365); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 562, 233); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+selectCodeEditor("board.xdc", 592, 230); // cl (w, cp)
+selectCodeEditor("board.xdc", 541, 233); // cl (w, cp)
+selectCodeEditor("board.xdc", 524, 231); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'c'); // cl (w, cp)
+selectCodeEditor("board.xdc", 557, 246); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 587, 245); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+selectCodeEditor("board.xdc", 563, 333); // cl (w, cp)
+selectCodeEditor("board.xdc", 561, 350); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("board.xdc", 556, 366); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+selectCodeEditor("board.xdc", 750, 184); // cl (w, cp)
+// Elapsed time: 101 seconds
+selectCodeEditor("board.xdc", 842, 216); // cl (w, cp)
+selectCodeEditor("board.xdc", 846, 229); // cl (w, cp)
+selectCodeEditor("board.xdc", 864, 399); // cl (w, cp)
+selectCodeEditor("board.xdc", 797, 315); // cl (w, cp)
+selectCodeEditor("board.xdc", 349, 457); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("board.xdc", 862, 452); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cQ, cp)
+// bx (cp):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,508 MB. GUI used memory: 96 MB. Current time: 4/20/19, 12:49:16 AM EDT
+// Engine heap size: 1,508 MB. GUI used memory: 97 MB. Current time: 4/20/19, 12:49:16 AM EDT
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,508 MB. GUI used memory: 77 MB. Current time: 4/20/19, 12:49:18 AM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1480 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Finished Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+dismissDialog("Reloading"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 00:49:22 2019] Launched synth_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// Elapsed time: 34 seconds
+selectCodeEditor("board.xdc", 462, 99); // cl (w, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 84 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (cp):  Starting Design Runs : addNotify
+// Tcl Message: launch_runs impl_2 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Apr 20 00:51:23 2019] Launched impl_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/impl_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STEP_COMPLETED
+// ah (cp): Implementation Failed: addNotify
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cp)
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd)]", 1); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitTwo : MainMemory(behavorial_data_array) (MainMemory.vhd)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitThree : CacheStruct(Behavioral) (CacheStruct.vhd)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitThree : CacheStruct(Behavioral) (CacheStruct.vhd)]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitOne : CacheController(Behavioral) (CacheController.vhd)]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitOne : CacheController(Behavioral) (CacheController.vhd)]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitThree : CacheStruct(Behavioral) (CacheStruct.vhd)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitThree : CacheStruct(Behavioral) (CacheStruct.vhd)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevelCache(Behavioral) (TopLevelCache.vhd), UnitThree : CacheStruct(Behavioral) (CacheStruct.vhd)]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("CacheStruct.vhd", 113, 258); // cl (w, cp)
+// Elapsed time: 26 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "temp"); // l (aT, cp)
+selectCodeEditor("CacheStruct.vhd", 369, 124); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cQ, cp)
+// bx (cp):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1538.813 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,574 MB. GUI used memory: 103 MB. Current time: 4/20/19, 12:53:28 AM EDT
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'MainMemory' (2#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/MainMemory.vhd:15] INFO: [Synth 8-3491] module 'CacheStruct' declared at 'C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:34' bound to instance 'UnitThree' of component 'CacheStruct' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:100] INFO: [Synth 8-638] synthesizing module 'CacheStruct' [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:45] 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruOne_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruTwo_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruThree_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: Reason is one or more of the following : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM "lruFour_reg" dissolved into registers  Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons : 	1: Invalid write to RAM.  	2: Unable to determine number of words or word size in RAM.  	3: No valid read/write found for RAM.  RAM dissolved into registers 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'CacheStruct' (3#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/CacheStruct.vhd:45] INFO: [Synth 8-226] default block is never used [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:112] 
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'TopLevelCache' (4#1) [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/sources_1/new/TopLevelCache.vhd:42] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1645.375 ; gain = 106.563 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1649.605 ; gain = 110.793 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1649.605 ; gain = 110.793 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,589 MB (+5749kb) [00:37:21]
+// Engine heap size: 1,600 MB. GUI used memory: 81 MB. Current time: 4/20/19, 12:53:31 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,600 MB. GUI used memory: 80 MB. Current time: 4/20/19, 12:53:31 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1075 ms.
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,600 MB. GUI used memory: 79 MB. Current time: 4/20/19, 12:53:33 AM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1788 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Finished Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1738.887 ; gain = 200.074 
+// Elapsed time: 12 seconds
+dismissDialog("Reloading"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 00:53:45 2019] Launched synth_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 117 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 00:55:43 2019] Launched impl_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/impl_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 157 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Implementation Completed"); // ah (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sat Apr 20 00:58:21 2019] Launched impl_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/impl_2/runme.log 
+// TclEventType: RUN_FAILED
+// ah (cp): Bitstream Generation Failed: addNotify
+// Elapsed time: 49 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,768 MB. GUI used memory: 104 MB. Current time: 4/20/19, 12:59:18 AM EDT
+// [Engine Memory]: 1,937 MB (+281547kb) [00:43:55]
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cp)
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (DataOut) elapsed time: 0.3s
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton (C, I)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 01:00:25 2019] Launched synth_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 119 seconds
+dismissDialog("Synthesis Completed"); // ah (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CacheController.vhd", 4); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CacheStruct.vhd", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "board.xdc", 2); // k (j, cp)
+selectCodeEditor("board.xdc", 586, 92); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'c'); // cl (w, cp)
+selectCodeEditor("board.xdc", 563, 244); // cl (w, cp)
+selectCodeEditor("board.xdc", 568, 245); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 572, 246); // cl (w, cp)
+selectCodeEditor("board.xdc", 569, 246, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("board.xdc", 578, 246); // cl (w, cp)
+selectCodeEditor("board.xdc", 572, 245); // cl (w, cp)
+selectCodeEditor("board.xdc", 600, 246); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'c'); // cl (w, cp)
+selectCodeEditor("board.xdc", 566, 265); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 597, 74); // cl (w, cp)
+// Elapsed time: 40 seconds
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 541, 160); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("board.xdc", 589, 224); // cl (w, cp)
+selectCodeEditor("board.xdc", 668, 239); // cl (w, cp)
+selectCodeEditor("board.xdc", 583, 227); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "board.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("board.xdc", 871, 313); // cl (w, cp)
+selectCodeEditor("board.xdc", 871, 320); // cl (w, cp)
+selectCodeEditor("board.xdc", 913, 387); // cl (w, cp)
+selectCodeEditor("board.xdc", 218, 162); // cl (w, cp)
+selectCodeEditor("board.xdc", 301, 106); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cQ, cp)
+// bx (cp):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// Engine heap size: 1,946 MB. GUI used memory: 81 MB. Current time: 4/20/19, 1:06:34 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 81 MB. Current time: 4/20/19, 1:06:34 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1143 ms.
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 81 MB. Current time: 4/20/19, 1:06:35 AM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1818 ms.
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Finished Parsing XDC File [C:/Users/Aiden/Desktop/ECE562/ECE562.srcs/constrs_1/new/board.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+dismissDialog("Reloading"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 01:06:39 2019] Launched synth_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_2 -jobs 4 
+// Tcl Message: [Sat Apr 20 01:08:36 2019] Launched impl_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/impl_2/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 146 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_LAUNCH
+dismissDialog("Implementation Completed"); // ah (cp)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sat Apr 20 01:11:04 2019] Launched impl_2... Run output will be captured here: C:/Users/Aiden/Desktop/ECE562/ECE562.runs/impl_2/runme.log 
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 70 seconds
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+// Elapsed time: 534 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Physical Configuration, Chip Level]", 21); // ah (Q, cp)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Physical Configuration, Chip Level]", 21); // ah (Q, cp)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Physical Configuration, Chip Level, [DRC PDRC-153] Gated clock check: Net UnitOne/Address[1][0] is a gated clock net sourced by a combinational pin UnitOne/data_reg[961][31]_i_1/O, cell UnitOne/data_reg[961][31]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.. ]", 22); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Pin Planning]", 18); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC]", 17); // ah (Q, cp)
+// Elapsed time: 11 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevelCache, UnitOne (CacheController)]", 3, false); // ba (Q, cp)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevelCache, UnitOne (CacheController)]", 3, true, false, false, false, false, true); // ba (Q, cp) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_DEFINITION
+// Elapsed time: 16 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream]", 15); // ah (Q, cp)
+// Elapsed time: 12 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation]", 10); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis]", 3); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0); // ah (Q, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 105 MB. Current time: 4/20/19, 1:36:38 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 104 MB. Current time: 4/20/19, 2:06:38 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 2:36:39 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 3:06:39 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 3:36:39 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 4:06:39 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 4:36:40 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 5:06:40 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 5:36:40 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 6:06:41 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 6:36:41 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 7:06:41 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 7:36:42 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 8:06:42 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 8:36:42 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 9:06:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 9:36:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 10:06:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 10:36:44 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 11:06:44 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 11:36:44 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 12:06:44 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 12:36:45 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 1:06:45 PM EDT
+// Elapsed time: 42780 seconds
+selectCodeEditor("CacheController.vhd", 1138, 292); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 1:36:45 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 2:06:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 2:36:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 3:06:46 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 3:36:47 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 4:06:47 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 4:36:48 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 5:06:48 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 5:36:48 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 6:06:49 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 6:36:49 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 7:06:49 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 7:36:50 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 8:06:50 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 8:36:50 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 9:06:51 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 9:36:51 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 10:06:51 PM EDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 213ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 33313 seconds
+selectCodeEditor("CacheController.vhd", 321, 239); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 10:36:51 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 11:06:52 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/20/19, 11:36:52 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 12:06:52 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 12:36:53 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 1:06:53 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 1:36:53 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 2:06:54 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 2:36:54 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 3:06:55 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 3:36:55 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 4:06:55 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 4:36:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 5:06:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 5:36:56 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 6:06:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 6:36:57 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 7:06:58 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 7:36:58 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 8:06:58 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 8:36:59 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 9:06:59 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 9:36:59 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 10:07:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 10:37:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 11:07:00 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 11:37:01 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 12:07:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 12:37:01 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 1:07:02 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 1:37:02 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 2:07:02 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 2:37:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 3:07:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 3:37:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 4:07:03 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 4:37:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 5:07:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 5:37:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 6:07:05 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 6:37:08 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 7:07:08 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 7:37:09 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 8:07:09 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 8:37:09 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 9:07:09 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 9:37:10 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 10:07:10 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 10:37:10 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 11:07:11 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/21/19, 11:37:11 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 12:07:11 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 12:37:12 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 1:07:12 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 1:37:12 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 2:07:13 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 2:37:13 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 3:07:13 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 3:37:14 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 4:07:14 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 4:37:14 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 5:07:15 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 5:37:15 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 6:07:15 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 6:37:16 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 7:07:16 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 7:37:16 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 8:07:17 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 8:37:17 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 9:07:17 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 9:37:18 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 10:07:18 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 10:37:18 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 11:07:19 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 11:37:19 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 12:07:19 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 12:37:20 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 1:07:20 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 1:37:20 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 2:07:21 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 2:37:21 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 3:07:21 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 3:37:22 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 4:07:22 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 4:37:22 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 5:07:23 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 5:37:23 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 6:07:23 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 6:37:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 7:07:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 7:37:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 8:07:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 8:37:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 9:07:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 9:37:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 10:07:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 10:37:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 11:07:27 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/22/19, 11:37:27 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 12:07:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 12:37:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 1:07:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 1:37:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 2:07:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 2:37:29 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 3:07:29 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 3:37:29 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 4:07:30 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 4:37:30 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 5:07:30 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 5:37:31 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 103 MB. Current time: 4/23/19, 6:07:31 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 6:37:31 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 7:07:32 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 7:37:32 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 8:07:32 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 8:37:33 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 9:07:33 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 9:37:33 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 10:07:33 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 10:37:34 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 11:07:34 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 11:37:34 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 12:07:35 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 12:37:35 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 1:07:35 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 1:37:36 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 2:07:36 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 2:37:36 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 3:07:37 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 3:37:37 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 4:07:37 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 4:37:38 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 5:07:38 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 5:37:38 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 6:07:38 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 6:37:39 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 7:07:39 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 7:37:39 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 8:07:40 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 8:37:41 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 9:07:41 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 9:37:42 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 10:07:42 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 10:37:42 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 11:07:43 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/23/19, 11:37:43 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 12:07:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 12:37:44 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  5355 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 1:07:44 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 1:37:45 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 2:07:45 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 2:37:45 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 3:07:46 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 3:37:46 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 4:07:46 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 4:37:47 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 5:07:47 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 5:37:47 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 6:07:48 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 6:37:48 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 7:07:48 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 102 MB. Current time: 4/24/19, 7:37:49 AM EDT

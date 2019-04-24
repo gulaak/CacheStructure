@@ -1,0 +1,199 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr  8 19:03:08 2019
+# Process ID: 18880
+# Current directory: C:/Users/Aiden/Desktop/ECE562
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18716 C:\Users\Aiden\Desktop\ECE562\ECE562.xpr
+# Log file: C:/Users/Aiden/Desktop/ECE562/vivado.log
+# Journal file: C:/Users/Aiden/Desktop/ECE562\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Aiden/Desktop/ECE562/ECE562.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+refresh_design
+launch_simulation
+source TopLevelCache.tcl
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Address} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+restart
+run 100 ns
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+add_force {/TopLevelCache/Address} -radix hex {0 0ns}
+add_force {/TopLevelCache/DataIn} -radix hex {AA 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+restart
+restart
+restart
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+add_force {/TopLevelCache/DataIn} -radix hex {AA 0ns}
+add_force {/TopLevelCache/Address} -radix dec {63 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Read} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+restart
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Read} -radix hex {1 0ns}
+run all
+close_sim
+launch_simulation
+source TopLevelCache.tcl
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+add_force {/TopLevelCache/Address} -radix hex {A 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Read} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+restart
+run 100 ns
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+add_force {/TopLevelCache/DataIn} -radix hex {B 0ns}
+add_force {/TopLevelCache/Address} -radix hex {C 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+restart
+add_force {/TopLevelCache/Address} -radix dec {63 0ns}
+add_force {/TopLevelCache/CLK} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/TopLevelCache/Read} -radix hex {0 0ns}
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+add_force {/TopLevelCache/DataIn} -radix hex {B 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+add_force {/TopLevelCache/DataIn} -radix hex {D 0ns}
+add_force {/TopLevelCache/DataIn} -radix hex {b 0ns}
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/DataIn} -radix hex {D 0ns}
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {1 0ns}
+run 100 ns
+add_force {/TopLevelCache/Write} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+close_sim

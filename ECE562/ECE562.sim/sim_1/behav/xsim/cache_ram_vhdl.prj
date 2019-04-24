@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ECE562.srcs/sources_1/imports/src/cache.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/controller.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/data_array.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/lru_array.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/miss_hit_logic.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/mux.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/ram.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/tag_valid_array.vhd" \
+"../../../../ECE562.srcs/sources_1/imports/src/cache_ram.vhd" \
+
+# Do not sort compile order
+nosort

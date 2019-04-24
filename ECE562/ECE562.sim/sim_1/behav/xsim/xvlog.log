@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Aiden/Desktop/ECE562/ECE562.ip_user_files/bd/Cache/ip/Cache_blk_mem_gen_0_2/sim/Cache_blk_mem_gen_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cache_blk_mem_gen_0_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Aiden/Desktop/ECE562/ECE562.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
