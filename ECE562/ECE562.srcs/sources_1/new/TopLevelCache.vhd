@@ -46,13 +46,19 @@ component CacheController
 end component;
 
 component MainMemory
-     port(CLK, Wren:in STD_LOGIC;
+     port(CLK, Wren,Ren:in STD_LOGIC;
        
          Address:in STD_LOGIC_VECTOR(9 downto 0);
          data_in:in STD_LOGIC_VECTOR(31 downto 0);
          data_out:out STD_LOGIC_VECTOR(31 downto 0);
          ram_ready:out STD_LOGIC := '0'
      );
+end component;
+
+component Divider
+    port(CLK: in STD_LOGIC;
+         CLKOut: out STD_LOGIC
+         );
 end component;
 
 component CacheStruct
@@ -70,11 +76,14 @@ signal hit,evict,RamDone,Dirty,CacheWrite,CacheRead,RamWrite,RamRead,CacheDirty,
 signal CacheOutData: STD_LOGIC_VECTOR(31 downto 0);
 signal RamData,RamIn: STD_LOGIC_VECTOR(31 downto 0);
 signal CacheIn: STD_LOGIC_VECTOR(31 downto 0);
+signal CLKSig: STD_LOGIC:='0';
 begin
 
 
+ClockDiv: Divider port map(CLK => CLK,
+                           CLKOut => CLKSig);
 
-UnitOne: CacheController port map(CLK => CLK,
+UnitOne: CacheController port map(CLK => CLKSig,
                                   Wren => Write,
                                   Hit => hit,
                                   evict => evict,
@@ -90,15 +99,16 @@ UnitOne: CacheController port map(CLK => CLK,
                                   CacheSel => CacheWriteSel,
                                   Cache_Ready => Ready);
                                   
-UnitTwo: MainMemory port map(CLK => CLK,
+UnitTwo: MainMemory port map(CLK => CLKSig,
                              Wren => RamWrite,
                              Address => Address,
                              data_in => RamIn,
                              data_out => RamData,
-                             ram_ready => RamDone);
+                             ram_ready => RamDone,
+                             Ren => RamRead);
                              
 UnitThree: CacheStruct port map(Address => Address,
-                                CLK => CLK,
+                                CLK => CLKSig,
                                 ren => CacheRead,
                                 CacheDirty => CacheDirty,
                                 evict => evict,

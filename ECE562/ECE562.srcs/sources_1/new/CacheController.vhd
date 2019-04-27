@@ -118,10 +118,14 @@ if(falling_edge(CLK)) then
  
 
     when BlockMemory =>
+        if(RamDone = '1') then
            Write <= '1'; 
            next_state <= CacheWrite;
            CacheSel <= '1';
            miss_status <= '1';
+        else
+            next_state <= BlockMemory;
+        end if;
            
         
 --    when Eviction =>

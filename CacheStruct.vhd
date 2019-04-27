@@ -170,7 +170,7 @@ begin
           end if;
        end if;
           if(wren = '1') then
-                temp <= (cacheone(curr)(36) and cachetwo(curr)(36) and cachethree(curr)(36) and cachefour(curr)(36));
+                
                 if(temp2 = '1') then
                    
                     evict <= '1';
