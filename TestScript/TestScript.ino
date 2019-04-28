@@ -10,7 +10,7 @@ void setup() {
   pinMode(42,INPUT);
 
 
-  for(int i=0; i< 9; i+=2){
+  for(int i=0; i< 8; i+=2){
 
       addressOut(i);  // stride address space of Cache by 2
       cacheWrite();
@@ -45,6 +45,7 @@ uint32_t requestfromCache(uint16_t addr) {
 
 
   }
+  digitalWrite(48,LOW);
 
 
 
